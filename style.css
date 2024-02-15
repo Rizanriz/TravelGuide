@@ -11,6 +11,7 @@ body {
     font-family: noto;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .overlay {
@@ -96,7 +97,13 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.card {
+    transition: box-shadow 0.3s ease; 
+}
 
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.618); /* Shadow effect on hover */
 }
 #page2 button{
     width: 200px;
@@ -119,10 +126,11 @@ h1{
     align-items: center;
     justify-content: center;
     padding-top: 30px;
-
+}
+.carousel-item{
+    height: 500px;
 }
 #page3 .slider{
-    /* width: 80%; */
     padding: 20px 50px;
 }
 .carousel-inner{
@@ -331,4 +339,14 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@media (max-width: 500px) {
+    #page1{
+        width: 100%;
+    }
+    #page1 button{
+        top: 80%;
+    }
 }
